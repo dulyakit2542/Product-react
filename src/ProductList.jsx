@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Rating, RatingView } from "react-simple-star-rating";
 
 import "./App.css";
 import logo from "./assets/logo.svg";
@@ -103,49 +104,11 @@ const ProductList = () => {
                           fontSize: "9pt",
                         }}
                       >
-                        {item.review["rating"] == 5 ? (
-                          <div>
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                          </div>
-                        ) : item.review["rating"] == 4 ? (
-                          <div>
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img src={star} />
-                          </div>
-                        ) : item.review["rating"] == 3 ? (
-                          <div>
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img src={star} />
-                            <img src={star} />
-                          </div>
-                        ) : item.review["rating"] == 2 ? (
-                          <div>
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img src={star} />
-                            <img src={star} />
-                            <img src={star} />
-                          </div>
-                        ) : item.review["rating"] == 1 ? (
-                          <div>
-                            <img style={{ width: "10pt" }} src={starFull} />
-                            <img src={star} />
-                            <img src={star} />
-                            <img src={star} />
-                            <img src={star} />
-                          </div>
-                        ) : (
-                          ""
-                        )}
+                        <Rating
+                          size="15px"
+                          className="Rating"
+                          ratingValue={item.review["rating"]}
+                        />
                       </div>
                     </div>
                   </div>
