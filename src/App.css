@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.TextNav{
+  color: white;
+  margin-left: 40pt;
+}
+.boxFooter{
+  background-color: rgb(16, 92, 102);
+  height: 50pt;
+  margin-top: 10pt;
+}
+
+.card:hover{
+  opacity: 0.7;
+}
